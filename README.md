@@ -7,4 +7,5 @@ And Bootstrap already preloaded
 Start the project with
 
 python3 main.py
+<br>
 and install the libraries
