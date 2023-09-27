@@ -1,0 +1,39 @@
+<!--Header-->
+{% include "header.html" %}
+{% include "navbar.html" %}
+<!--Content-->
+<div class="container">
+<h1>Lorem Ipsum</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce leo est, malesuada vitae magna vitae,
+        pellentesque vestibulum ligula. Nulla cursus diam quis faucibus rutrum. Nam consequat tellus vitae lectus ultrices,
+        eget pharetra elit maximus. Nulla facilisi. Nam non nisi justo. Praesent sagittis massa sit amet semper placerat.
+        Donec sodales posuere nisl, euismod sagittis tellus volutpat nec.
+        Vestibulum eleifend, quam sed gravida condimentum, nisl magna iaculis leo, sit amet cursus dui quam vel eros.
+        Cras eleifend, justo eu lobortis ornare, ante erat tristique erat,
+        ac ullamcorper mi orci quis elit. In lacus nunc, pretium id odio id, luctus malesuada ex. Ut ac lobortis nibh.</p>
+    <h3>Lorem Ipsum</h3>
+    <p>Nullam eget odio quam. Maecenas ligula neque, auctor eu sodales quis, blandit in nibh. Nulla facilisi.
+        Duis id nulla nisi. Phasellus nibh dolor, efficitur vel bibendum et, rutrum a tellus. Donec vulputate a ipsum in sollicitudin.
+        Donec cursus ante in tortor pulvinar auctor. Duis mauris purus,
+        porttitor eu convallis eget, consectetur ut ipsum. Duis nibh mi, pretium non hendrerit et, convallis ut lacus.</p>
+
+    <h3>List Cycle Example</h3>
+    {% for a in list %}
+    <p>{{a}}</p>
+    {% endfor %}
+
+    <h3>Dict Cycle Example</h3>
+    {% for dict_item in dict %}
+        {% for key, value in dict_item.items() %}
+            <p>Key: {{key}} , Value: {{value}}</p>
+        {% endfor %}
+    {% endfor %}
+    <form method="post" action="/app">
+        <h1>TEST POST FORM</h1>
+        <input type="hidden" name="testpost" value="Pizza">
+        <button type="submit" class="btn btn-primary">Click Me!</button>
+    </form>
+</div>
+
+<!--Footer-->
+{% include "footer.html" %}
